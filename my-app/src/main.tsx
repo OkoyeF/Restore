@@ -1,16 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// import './app/layout/styles.css'
-import App from './app/layout/App'
-// import from mui.com Roboto font
-import '@fontsource/roboto/300.css';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
+import { RouterProvider } from 'react-router-dom';
+import { router } from './app/route/Routes';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
